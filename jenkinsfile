@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    steges{
+        stage("build"){
+            steps{
+                script{
+                    MvnHose = tool "mvn"
+                    sh "${MvnHose -v}"
+                }
+            }
+        }
+    }
+
+
+}
